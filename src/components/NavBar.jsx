@@ -11,7 +11,7 @@ const NavBar = () => {
       </Box>
       <Spacer />
       <Box m="1" p="4" bg="#562135" color="white">
-        <Link>NOTICIAS</Link>
+        <Link to={"/Noticias"}>NOTICIAS</Link>
       </Box>
       <Spacer />
       <Box m="1" p="4" bg="#562135" color="white">
@@ -23,7 +23,7 @@ const NavBar = () => {
       </Box>
       <Spacer />
       <Box m="1" p="4" bg="#562135" color="white">
-        <Link>CONTACTO</Link>
+        <Link to={"/contacto"}>CONTACTO</Link>
       </Box>
       <Spacer />
       <Box m="1" p="4" bg="#562135" color="white">
