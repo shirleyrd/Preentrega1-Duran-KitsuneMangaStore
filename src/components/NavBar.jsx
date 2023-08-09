@@ -1,28 +1,25 @@
 import React from "react";
-import { Link, Flex, Box, Spacer, Text } from "@chakra-ui/react";
+import { Flex, Box, Spacer, Text } from "@chakra-ui/react";
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <Flex className="navegador">
-      <Box p="4" bg="#c3829e" color="white">
-        <Text fontSize={25}>Kitsune Manga Store</Text>
+    <Flex className="navegador" maxH="210px" mb="20px">
+      <Box p="4" bg="#c3829e" color="white" fontSize="25px">
+        <Link to={"/"}>Kitsune Manga Store</Link>
       </Box>
       <Spacer />
       <Box m="1" p="4" bg="#562135" color="white">
-        <Link>HOME</Link>
+        <Link>NOTICIAS</Link>
       </Box>
       <Spacer />
       <Box m="1" p="4" bg="#562135" color="white">
-        <Link>NOVEDADES</Link>
+        <Link to={`/categoria/${"manga"}`}>MANGA</Link>
       </Box>
       <Spacer />
       <Box m="1" p="4" bg="#562135" color="white">
-        <Link>MANGA</Link>
-      </Box>
-      <Spacer />
-      <Box m="1" p="4" bg="#562135" color="white">
-        <Link>LIBROS</Link>
+        <Link to={`/categoria/${"libro"}`}>LIBROS</Link>
       </Box>
       <Spacer />
       <Box m="1" p="4" bg="#562135" color="white">
@@ -30,7 +27,9 @@ const NavBar = () => {
       </Box>
       <Spacer />
       <Box m="1" p="4" bg="#562135" color="white">
-        <CartWidget />
+        <Link to={"/cart"}>
+          <CartWidget />
+        </Link>
       </Box>
       <Spacer />
     </Flex>

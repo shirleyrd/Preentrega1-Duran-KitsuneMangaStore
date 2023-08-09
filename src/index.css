@@ -1,3 +1,4 @@
+
 .navegador {
     background-color: #c3829e;
     height: 70px;
@@ -8,4 +9,12 @@
     color: 	#c3829e;
     text-align: center;
 
+}
+
+.cardContainer {
+   display: inline;
+}
+
+h1 {
+    font-size: 50px ;
 }
