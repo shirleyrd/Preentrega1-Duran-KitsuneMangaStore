@@ -16,6 +16,7 @@ const ItemListContainer = () => {
     
 ]
 
+
 const getProductos = new Promise((resolve, reject) => {   
     if (productos.length > 0) {
          setTimeout(() => {
@@ -42,7 +43,7 @@ const filtroProd = productos.filter((producto) => producto.categoria === categor
 
   return (
     <Box>
-      <ItemList productos={filtroProd} />
+      {categoria ? <ItemList productos={filtroProd} /> : <ItemList productos={productos} />}
     </Box>
   )
 }

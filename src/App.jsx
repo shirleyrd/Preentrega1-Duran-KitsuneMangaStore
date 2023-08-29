@@ -3,15 +3,20 @@ import NavBar from './components/NavBar'
 import Home from './components/Home'
 import Cart from './components/Cart'
 import Contacto from './components/Contacto'
-import Noticias from './components/Noticias'
 import ItemListContainer from './components/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ShoppingCartContext from './context/ShoppingCartContext'
 
 
 const App = () => {
   
   return (
+ <>
+
+    <ShoppingCartContext>
+    </ShoppingCartContext>
+
   <BrowserRouter>
        <NavBar />
 
@@ -23,13 +28,15 @@ const App = () => {
         <Route exact path="/item/:id" element={<ItemDetailContainer />} />
         <Route exact path="/cart" element={<Cart />} />
         <Route exact path="/contacto" element={<Contacto />} />
-        <Route exact path="/noticias" element={<Noticias />} />
+        <Route exact path="/catalogo" element={<ItemListContainer />} />
 
   </Routes>
 
 
 
   </BrowserRouter>
+
+ </> 
   )
 }
 
