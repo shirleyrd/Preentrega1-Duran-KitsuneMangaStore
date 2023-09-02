@@ -23,8 +23,8 @@ En este repositorio encontrarás el código fuente como desafío final del curso
 - **Chakra UI:** Chakra UI se utiliza para el diseño y la interfaz de usuario de la aplicación, proporcionando componentes estilizados y personalizables.
 - **React Router DOM:** React Router DOM para la navegación y la gestión de las rutas de la aplicación.
 - **Vite:** Vite es el entorno de desarrollo utilizado para compilar y servir la aplicación de forma rápida y eficiente.
-- - **Firebase:** Utilicé Firebase para el almacenamiento de datos.
-- - *React Toastify:** React Toastify se utiliza para mostrar notificaciones al usuario
+- **Firebase:** Utilicé Firebase para el almacenamiento de datos.
+- *React Toastify:** React Toastify se utiliza para mostrar notificaciones al usuario
 - 
 - ## Instalación
 

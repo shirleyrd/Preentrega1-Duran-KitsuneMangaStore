@@ -20,8 +20,8 @@ const ItemCount = ({ handleAgregar }) => {
       <Flex justify="center" align="center" mb="4">
         <Button
           size="sm"
-          variant="outline"
-          colorScheme="teal"
+          variant="solid"
+          colorScheme="pink"
           onClick={handleRestar}
         >
           -
@@ -31,16 +31,16 @@ const ItemCount = ({ handleAgregar }) => {
         </Text>
         <Button
           size="sm"
-          variant="outline"
-          colorScheme="teal"
+          variant="solid"
+          colorScheme="pink"
           onClick={handleSumar}
         >
           +
         </Button>
       </Flex>
       <Button
-        size="sm"
-        colorScheme="teal"
+        size="lg"
+        colorScheme="pink"
         onClick={() => handleAgregar(cantidad)}
       >
         Agregar al carrito
