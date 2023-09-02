@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Container, Heading, FormControl, Input, Button, RadioGroup, Radio, Stack, Box, Center} from '@chakra-ui/react';
-import { addDoc, collection, getFirestore } from 'firebase/firestore';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useState } from 'react'
+import { Container, Heading, FormControl, Input, Button, RadioGroup, Radio, Stack, Box, Center} from '@chakra-ui/react'
+import { addDoc, collection, getFirestore } from 'firebase/firestore'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 
 const Checkout = ({ cart, precioTotal, handleEmptyCart }) => {
@@ -44,10 +44,12 @@ const Checkout = ({ cart, precioTotal, handleEmptyCart }) => {
   };
 
   return (
-    <Container maxW="container.sm" p={4}>
-      <Heading as="h1" size="xl" textAlign="center" mb={4}>
+    <Container className="formContainer" maxW="container.sm" p={4}>
+
+      <Heading as="h1" size="xl" textAlign="center" mb={4} colorScheme='black'>
         Finalizar compra
       </Heading>
+      
       <form onSubmit={handleSubmit}>
         <FormControl mb={4}>
           <Input
@@ -104,7 +106,7 @@ const Checkout = ({ cart, precioTotal, handleEmptyCart }) => {
         </FormControl>     
         
         <Center>
-  <Button type="submit" colorScheme="pink">
+  <Button mt="20px" type="submit" colorScheme="pink">
     Comprar
   </Button>
 </Center>

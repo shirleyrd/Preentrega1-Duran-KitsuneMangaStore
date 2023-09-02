@@ -1,5 +1,5 @@
-import React from "react";
-import { Flex, Box } from "@chakra-ui/react";
+import React from 'react';
+import { Flex, Box } from '@chakra-ui/react';
 import { CartContext } from '../context/CartContext'
 import {useContext} from 'react'
 

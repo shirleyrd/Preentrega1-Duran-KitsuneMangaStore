@@ -43,7 +43,7 @@ const Cart = () => {
           <Text fontSize="lg" fontWeight="bold">
             Precio total: ${precioTotal()}
           </Text>
-          <Button colorScheme="a64e73" onClick={handleVaciar}>
+          <Button colorScheme="red" onClick={handleVaciar}>
             Vaciar
           </Button>
           <ChakraLink as={Link} to="/checkout" fontSize="lg">
