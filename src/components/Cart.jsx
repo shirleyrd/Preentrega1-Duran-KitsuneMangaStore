@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   Container,
   Heading,
@@ -7,19 +7,18 @@ import {
   Link as ChakraLink,
   VStack,
   Box,
-  Image
-} from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
-import {CartContext} from '../context/CartContext' 
-import {useContext} from 'react'
+  Image,
+} from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
+import { useContext } from "react";
 
 const Cart = () => {
-
   const { cart, precioTotal, emptyCart } = useContext(CartContext);
 
   const handleVaciar = () => {
     emptyCart();
-}
+  };
   return (
     <Container maxW="container.sm" p={4}>
       <Heading as="h1" size="xl" textAlign="center" mb={4}>
@@ -52,11 +51,9 @@ const Cart = () => {
         </VStack>
       ) : (
         <Text fontSize="lg">El carrito está vacío</Text>
-        
       )}
     </Container>
-  )
-}
-  
+  );
+};
 
-export default Cart
+export default Cart;

@@ -1,7 +1,7 @@
-import React from "react";
-import { Flex, Box, Spacer, Text } from "@chakra-ui/react";
-import CartWidget from "./CartWidget";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Flex, Box, Spacer } from '@chakra-ui/react'
+import CartWidget from './CartWidget'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   return (

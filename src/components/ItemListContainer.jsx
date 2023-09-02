@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import ItemList from './ItemList';
-import { Flex } from '@chakra-ui/react';
-import { useParams } from 'react-router-dom';
-import { getDocs, collection, query, where } from 'firebase/firestore';
-import { db } from '../firebase/firebaseConfig';
-import Loading from './Loading'
-
+import React, { useState, useEffect } from "react";
+import ItemList from "./ItemList";
+import { Flex } from "@chakra-ui/react";
+import { useParams } from "react-router-dom";
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { db } from "../firebase/firebaseConfig";
+import Loading from "./Loading";
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
@@ -13,8 +12,10 @@ const ItemListContainer = () => {
   const { categoria } = useParams();
 
   useEffect(() => {
-    const productosRef = collection(db, 'productos');
-    const q = categoria ? query(productosRef, where('categoria', '==', categoria)) : productosRef;
+    const productosRef = collection(db, "productos");
+    const q = categoria
+      ? query(productosRef, where("categoria", "==", categoria))
+      : productosRef;
 
     getDocs(q)
       .then((res) => {
@@ -25,13 +26,13 @@ const ItemListContainer = () => {
         setLoading(false);
       })
       .catch((error) => {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
         setLoading(false);
-      },600);
+      }, 600);
   }, [categoria]);
 
   if (loading) {
-    return <Loading />; 
+    return <Loading />;
   }
 
   return (
