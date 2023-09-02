@@ -1,5 +1,5 @@
-# Preentrega2-Duran-KitsuneMangaStore
-Proyecto Ecommerce React - Kitsune Manga Store
+#KitsuneMangaStore - Proyecto React App
+
 
 Gif navegabilidad
 
