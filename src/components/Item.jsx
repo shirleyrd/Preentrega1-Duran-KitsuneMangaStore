@@ -9,13 +9,24 @@ import {
   Button,
   Image,
   Center,
- Grid
+ Flex
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 const Item = ({ id, nombre, precio, categoria, imagen }) => {
   return (
-<Grid templateColumns="repeat(auto-fill, minmax(300px, 1fr))" gap={4} p={4} autoRows="1fr" >
+
+
+<Flex
+  className="card"
+  flexWrap="wrap"
+  justifyContent="center"
+  gap={4}
+  p={4}
+  mx="auto"
+  minWidth='max-content' 
+  maxWidth='500px'
+>
   <Center>
     <Card maxW="sm">
       <Image
@@ -27,7 +38,7 @@ const Item = ({ id, nombre, precio, categoria, imagen }) => {
         h="100%"
       />
       <CardBody alignContent="center" bg="#d3a3b8" p={4}>
-        <Stack spacing="2">
+        <Stack spacing="">
           <Heading color="black" size="md">
             {nombre}
           </Heading>
@@ -42,9 +53,8 @@ const Item = ({ id, nombre, precio, categoria, imagen }) => {
       </CardFooter>
     </Card>
   </Center>
-
-  {/* Repite este bloque para cada tarjeta */}
-</Grid>
+ 
+</Flex>
   );
 };
 

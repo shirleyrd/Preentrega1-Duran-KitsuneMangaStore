@@ -24,13 +24,13 @@ const ItemDetail = ({ producto}) => {
 
   return (
     <Flex justify="center" align="center" mt="4">
-      <Box maxW="xl" borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="lg">
-        <Image src={producto.imagen} alt={producto.nombre} />
+      <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="lg">
+        <Image src={producto.imagen} alt={producto.nombre} maxWidth="100%" />
         <Box p="4">
           <Heading as="h2" size="lg">
             {producto.nombre}
           </Heading>
-          <Text fontSize="lg" mt="2" color="teal.500">
+          <Text fontSize="lg" mt="2" color="#B76789">
             Precio: ${producto.precio}
           </Text>
           <Text fontSize="md" mt="2">
