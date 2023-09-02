@@ -40,4 +40,4 @@ Siga estos pasos para configurar y ejecutar la aplicación en su máquina local:
 Gif navegabilidad
 
 
-![](https://github.com/shirleyrd/Preentrega1-Duran-KitsuneMangaStore/blob/main/src/assets/Kitsune Manga Store —.gif)
+![](https://github.com/shirleyrd/Preentrega1-Duran-KitsuneMangaStore/blob/main/src/assets/KitsuneMangaStore—.gif)
