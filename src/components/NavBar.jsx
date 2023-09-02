@@ -19,7 +19,7 @@ const NavBar = () => {
       </Box>
       <Spacer />
       <Box m="1" p="4" bg="#562135" color="white">
-        <Link to={`/categoria/${"libro"}`}>LIBROS</Link>
+        <Link to={`/categoria/${"comic"}`}>COMICS</Link>
       </Box>
       <Spacer />
       <Box m="1" p="4" bg="#562135" color="white">

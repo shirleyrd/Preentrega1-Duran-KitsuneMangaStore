@@ -1,53 +1,56 @@
-import React from 'react'
-import ItemCount from './ItemCount'
-import {useParams} from 'react-router-dom'
-import { Card, CardHeader, CardBody, CardFooter, Button, Heading, Text, Center, Image, Flex } from '@chakra-ui/react'
+import { useContext, useState } from 'react';
+import ItemCount from './ItemCount';
+import { Box,  Heading, Text, Image, Flex } from '@chakra-ui/react';
+import { CartContext } from '../context/CartContext';
 
+const ItemDetail = ({ producto}) => {
+  const { addCart } = useContext(CartContext);
+  const [cantidad, setCantidad] = useState(1);
+  
 
-const ItemDetail = ({ productos }) => {
-  const {id} = useParams();
-  console.log(productos)
+  const handleRestar = () => {
+    cantidad > 1 && setCantidad(cantidad - 1);
+    
+  };
 
-  const filtroProd = productos.filter((producto) => producto.id == id)
+  const handleSumar = () => {
+    cantidad < producto.cantidad && setCantidad(cantidad + 1);
+  };
+
+  const handleAgregar = () => {
+    
+    addCart(producto, cantidad);
+  };
 
   return (
-    <div>
-        {filtroProd.map((p) => {
-          return (
-            <div key={p.id}>
-            <Center>
-
-              <Card maxW="40%" mt ="50px" size="lg" bg="#c17c99" >
-                  <CardHeader>
-                    <Heading size='lg'>{p.nombre}</Heading>
-                  </CardHeader>
-                  <CardBody>
-                  <Flex justifyContent="center" alignItems="center" mb="12px">
-                  <Image
-            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            alt="Green double couch with wooden legs"
-            borderRadius="lg" maxW="70%"
+    <Flex justify="center" align="center" mt="4">
+      <Box maxW="xl" borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="lg">
+        <Image src={producto.imagen} alt={producto.nombre} />
+        <Box p="4">
+          <Heading as="h2" size="lg">
+            {producto.nombre}
+          </Heading>
+          <Text fontSize="lg" mt="2" color="teal.500">
+            Precio: ${producto.precio}
+          </Text>
+          <Text fontSize="md" mt="2">
+            Categoría: {producto.categoria}
+          </Text>
+          <Text fontSize="md" mt="2" className="descripcion">
+            {producto.descripcion}
+          </Text>
+          <ItemCount
+            cantidad={cantidad}
+            handleRestar={handleRestar}
+            handleSumar={handleSumar}            
+            handleAgregar={() => {
+              addCart(producto, cantidad); 
+            }}
           />
-          </Flex>
-                    <Text fontSize="md">{p.descripcion}</Text>                    
-                    <Text color="black" fontSize="2xl">${p.precio}</Text>
-                    <Text as="i" fontSize="sm">{p.categoria}</Text>
-                  </CardBody>
-                  <CardFooter>
-                    <ItemCount />
-                    <Button>Añadir</Button>
-                  </CardFooter>
-                </Card>
-              </Center>            
-             </div> 
-          )
-      })}    
-   </div>        
-              
-  )
-
-}
-
-
+        </Box>
+      </Box>
+    </Flex>
+  );
+};
 
 export default ItemDetail;

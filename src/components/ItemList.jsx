@@ -12,8 +12,10 @@ const ItemList = ({productos}) => {
                   key = {p.id}
                   id = {p.id} 
                   nombre = {p.nombre}
-                  descripcion = {p.descripcion}                  
-                  stock = {p.stock} />
+                  descripcion = {p.descripcion}
+                  imagen = {p.imagen} 
+                  precio = {p.precio}                 
+                  categoria = {p.categoria} />
    
          )
       })}      

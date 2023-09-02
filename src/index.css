@@ -4,12 +4,6 @@
     height: 70px;
 }
 
-.greeting {
-    font-size: 30px;
-    color: 	#c3829e;
-    text-align: center;
-
-}
 
 .cardContainer {
    display: inline;
@@ -17,4 +11,19 @@
 
 h1 {
     font-size: 50px ;
+}
+
+.Toastify__toast-body {
+    font-size: 16px; /* Tamaño de fuente */
+    background-color: #fff; /* Color de fondo */
+    color: #333; /* Color del texto */
+    padding: 10px 20px; /* Relleno */
+    border-radius: 4px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    max-width: 400px; /* Ancho máximo */
+    text-align: center;}
+
+input {
+    border-radius: 50px;
+
 }
