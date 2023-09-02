@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <Flex className="navegador" maxH="210px" mb="20px">
-      <Box p="4" bg="#741974" color="white" fontSize="25px">
+      <Box p="4" pb="4" bg="#741974" color="white" fontSize="30px">
         <Link to={"/"}>Kitsune Manga Store</Link>
       </Box>
       <Spacer />
