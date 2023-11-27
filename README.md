@@ -1,8 +1,6 @@
 #KitsuneMangaStore - Proyecto React App
 
 
-#Curso React Comision 47120
-*Profesor: Omar Manias
 
 # Tienda de Cómics y Manga
 
